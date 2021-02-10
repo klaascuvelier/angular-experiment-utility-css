@@ -21,7 +21,7 @@
 
 @mixin layout-content {
   flex: 1 1 auto;
-  background: #fff
+  background: #fff;
 }
 
 @mixin layout-vertical {
@@ -49,4 +49,3 @@
   display: flex;
   align-items: center;
 }
-

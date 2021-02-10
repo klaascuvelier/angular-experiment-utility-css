@@ -19,8 +19,6 @@ import { Component } from '@angular/core';
         <div class="sidebar-right-content"></div>
       </div>
     </div>
-  `
+  `,
 })
-export class Page1Component {
-
-}
+export class Page1Component {}

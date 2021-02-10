@@ -4,9 +4,10 @@ import { RouterModule } from '@angular/router';
 import { Page3Component } from './page3.component';
 
 @NgModule({
-  imports: [CommonModule, RouterModule.forChild([
-    {path: '', component: Page3Component}
-  ])],
-  declarations: [Page3Component]
+  imports: [
+    CommonModule,
+    RouterModule.forChild([{ path: '', component: Page3Component }]),
+  ],
+  declarations: [Page3Component],
 })
 export class Page3Module {}

@@ -1,4 +1,4 @@
-@import "../shared";
+@import '../shared';
 
 .wrapper {
   height: calc(100vh - 38px);
@@ -38,7 +38,6 @@
   @include layout-content;
 }
 
-
 .content-header {
   @include layout-header;
   @include valign-center;
@@ -51,4 +50,3 @@
 .content-content {
   @include layout-content;
 }
-
