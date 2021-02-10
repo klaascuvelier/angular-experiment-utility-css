@@ -23,6 +23,10 @@ In the `apps` folder in the root there is a `shared.scss` file with base styles 
 
 `app-without-utility-classes` will use the mixins in each individual style file with the defined css classes from the component's template. 
 
+### Application screenthos
+
+![Screenshot of the application in the browser](./application.jpg)
+
 ## The results
 
 ![Commandline output from application builds](./results.jpg)
