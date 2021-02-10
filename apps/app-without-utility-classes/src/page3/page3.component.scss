@@ -1,0 +1,54 @@
+@import "../shared";
+
+.wrapper {
+  height: calc(100vh - 38px);
+  @include layout-horizontal;
+}
+
+.sidebar-left {
+  @include layout-sidebar;
+  @include layout-sidebar-left;
+  @include layout-vertical;
+}
+
+.sidebar-right {
+  @include layout-sidebar;
+  @include layout-sidebar-right;
+  @include layout-vertical;
+}
+
+.content {
+  @include layout-content;
+  @include layout-vertical;
+}
+
+.sidebar-left-header {
+  @include layout-header;
+}
+
+.sidebar-left-content {
+  @include layout-content;
+}
+
+.sidebar-right-header {
+  @include layout-header;
+}
+
+.sidebar-right-content {
+  @include layout-content;
+}
+
+
+.content-header {
+  @include layout-header;
+  @include valign-center;
+}
+
+.content-footer {
+  @include layout-footer;
+}
+
+.content-content {
+  @include layout-content;
+}
+

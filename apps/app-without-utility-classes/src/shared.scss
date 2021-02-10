@@ -1,0 +1,52 @@
+@mixin layout-horizontal {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+@mixin layout-sidebar {
+  flex: 0 0 256px;
+  box-sizing: border-box;
+  background: #f1f1f1;
+}
+
+@mixin layout-sidebar-left {
+  border-right: 1px solid #999;
+}
+
+@mixin layout-sidebar-right {
+  border-left: 1px solid #999;
+}
+
+@mixin layout-content {
+  flex: 1 1 auto;
+  background: #fff
+}
+
+@mixin layout-vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+@mixin layout-header {
+  flex: 0 0 50px;
+  background: #f1f1f1;
+  border-bottom: 1px solid #999;
+  box-sizing: border-box;
+}
+
+@mixin layout-footer {
+  flex: 0 0 50px;
+  background: #f1f1f1;
+  border-top: 1px solid #999;
+  box-sizing: border-box;
+}
+
+@mixin valign-center {
+  display: flex;
+  align-items: center;
+}
+
