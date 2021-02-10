@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
   template: `
     <nav>
+      <h1>Using Utility Classes</h1>
       <ul>
         <li>
           <a routerLink="/page-1" routerLinkActive="active">Page 1</a>
