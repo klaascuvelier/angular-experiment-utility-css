@@ -16,10 +16,6 @@
     }
   },
   "projects": {
-    "app-without-utility-classes": { "tags": [] },
-    "app-without-utility-classes-e2e": {
-      "tags": [],
-      "implicitDependencies": ["app-without-utility-classes"]
-    }
+    "app-without-utility-classes": { "tags": [] }
   }
 }
