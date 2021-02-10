@@ -3,16 +3,18 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
+import { Page1Module } from '../page1/page1.module';
+import { Page1Component } from '../page1/page1.component';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule,
+    Page1Module,
     RouterModule.forRoot([
       {
         path: 'page-1',
-        loadChildren: () =>
-          import('../page1/page1.module').then((m) => m.Page1Module),
+        component: Page1Component,
       },
       {
         path: 'page-2',
