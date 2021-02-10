@@ -119,6 +119,94 @@
           }
         }
       }
+    },
+    "app-with-utility-classes": {
+      "projectType": "application",
+      "root": "apps/app-with-utility-classes",
+      "sourceRoot": "apps/app-with-utility-classes/src",
+      "prefix": "angular-experiment-utility-css",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/app-with-utility-classes",
+            "index": "apps/app-with-utility-classes/src/index.html",
+            "main": "apps/app-with-utility-classes/src/main.ts",
+            "polyfills": "apps/app-with-utility-classes/src/polyfills.ts",
+            "tsConfig": "apps/app-with-utility-classes/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "apps/app-with-utility-classes/src/favicon.ico",
+              "apps/app-with-utility-classes/src/assets"
+            ],
+            "styles": ["apps/app-with-utility-classes/src/styles.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/app-with-utility-classes/src/environments/environment.ts",
+                  "with": "apps/app-with-utility-classes/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "app-with-utility-classes:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "app-with-utility-classes:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "app-with-utility-classes:build"
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/app-with-utility-classes/src/**/*.ts",
+              "apps/app-with-utility-classes/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/app-with-utility-classes"],
+          "options": {
+            "jestConfig": "apps/app-with-utility-classes/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   }
 }

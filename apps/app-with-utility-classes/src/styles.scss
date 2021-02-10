@@ -1,0 +1,54 @@
+@import '../../shared';
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+
+.layout-horizontal {
+  @include layout-horizontal;
+
+  .sidebar {
+    @include layout-sidebar;
+
+    &.left {
+      @include layout-sidebar-left;
+    }
+
+    &.right {
+      @include layout-sidebar-right;
+    }
+  }
+
+  .content {
+    @include layout-content;
+  }
+}
+
+
+.layout-vertical {
+  @include layout-vertical;
+
+  .header {
+    @include layout-header;
+  }
+
+  .footer {
+    @include layout-footer;
+  }
+
+  .content {
+    @include layout-content;
+  }
+}
+
+.valign-center {
+  @include valign-center;
+}

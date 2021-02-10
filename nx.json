@@ -16,6 +16,7 @@
     }
   },
   "projects": {
-    "app-without-utility-classes": { "tags": [] }
+    "app-without-utility-classes": { "tags": [] },
+    "app-with-utility-classes": { "tags": [] }
   }
 }
